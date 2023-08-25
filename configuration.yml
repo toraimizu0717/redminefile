@@ -67,8 +67,13 @@ default:
   #    delivery_method: :sendmail
     delivery_method: :smtp
     smtp_settings:
-      address: 192.168.1.111
-      port: 25
+      enable_starttls_auto: true
+      address: "smtp.gmail.com"
+      port: 587
+      domain: "smtp.gmail.com"
+      authentication: :plain
+      user_name: "toraimizu@gmail.com"
+      password: "qoyjxvoiighsgadn"
 
   # Absolute path to the directory where attachments are stored.
   # The default is the 'files' directory in your Redmine instance.
