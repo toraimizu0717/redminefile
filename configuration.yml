@@ -66,18 +66,9 @@ default:
   #  email_delivery:
   #    delivery_method: :sendmail
     delivery_method: :smtp
-    {{SMTP_METHOD}}_settings:
-      enable_starttls_auto: {{SMTP_STARTTLS}}
-      address: "localhost"
+    smtp_settings:
+      address: 192.168.1.111
       port: 25
-      domain: '{{SMTP_DOMAIN}}'
-      authentication: {{SMTP_AUTHENTICATION}}
-      user_name: '{{SMTP_USER}}'
-      password: '{{SMTP_PASS}}'
-      openssl_verify_mode: '{{SMTP_OPENSSL_VERIFY_MODE}}'
-      ca_path: '{{SMTP_CA_PATH}}'
-      ca_file: '{{SMTP_CA_FILE}}'
-      tls: {{SMTP_TLS}}
 
   # Absolute path to the directory where attachments are stored.
   # The default is the 'files' directory in your Redmine instance.
